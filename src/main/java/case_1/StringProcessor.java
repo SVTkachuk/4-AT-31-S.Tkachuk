@@ -20,14 +20,15 @@ public class StringProcessor {
         //Task 4. Create function which takes 2 parameters:
         //1st(String) – text; 2nd (int) - index of word. Function should return number of chars in word by its index in text
         System.out.println("Chose word index:");
-        int index = input.nextInt() -1;
+        int index = input.nextInt();
         while(index > numberOfWords){
             System.out.println("Max index is: " + numberOfWords);
-           index = input.nextInt() -1;
+           index = input.nextInt();
         }
-        wordPicker(s,index);
+        wordPicker(s,index-1);
     }
     private static void wordPicker(String str, int i) {
         System.out.println(str.split(" ")[i] +  " -length:" + str.split(" ")[i].length());
     }
 }
+
