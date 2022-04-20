@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parameter test Suite" verbose="1">
+    <parameter name="param1" value= "1" />
+    <parameter name="param2" value= "2" />
+    <parameter name="param3" value= "3" />
+    <test name="Parameter Test one">
+        <classes>
+            <class name="case_8.ParamTest">
+                <methods>
+                    <include name="AdditionParamTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

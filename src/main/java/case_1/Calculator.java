@@ -2,7 +2,7 @@ package case_1;
 
 import java.util.Scanner;
 public class Calculator {
-    public static void main(String[] args) {
+    public static void main() {
         //#Primitives
         //Task 1. Implement a simple calculator with 4 operations. Each operation - different method. Use it in the main method.
         System.out.println("For float value use ',' example: 4,4");
@@ -22,19 +22,19 @@ public class Calculator {
         System.out.println(dividedBy(a,b));
     }
 
-    private static double dividedBy(double a, double b) {
+    public static double dividedBy(double a, double b) {
         return a/b;
     }
 
-    private static double times(double a, double b) {
+    public static double times(double a, double b) {
         return a*b;
     }
 
-    private static double minus(double a, double b) {
+    public static double minus(double a, double b) {
         return a-b;
     }
 
-    private static double plus(double a, double b) {
+    public static double plus(double a, double b) {
         return a+b;
     }
 }
