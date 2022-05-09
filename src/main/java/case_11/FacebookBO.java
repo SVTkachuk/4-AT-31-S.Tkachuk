@@ -32,7 +32,6 @@ public class FacebookBO {
     }
 
     public void isLogged(){
-        boolean isLogged = signUpPO.isLogged();
-      Assert.assertTrue(isLogged,"is not logged");
+      Assert.assertTrue(signUpPO.isLogged(),"is not logged");
     }
 }
