@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "453c29a5-465c-4ddc-8c14-bb80686a65c7",
 		"name": "TrelloCollection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20819583"
 	},
 	"item": [
 		{
@@ -22,7 +23,11 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.environment.set(\"boardId\", pm.response.json().id);"
+							"\r",
+							"pm.environment.set(\"boardId\", pm.response.json().id);\r",
+							"pm.environment.get(\"boardId\");\r",
+							"\r",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -101,7 +106,7 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
-							"pm.globals.set(\"boardName\", \"oldBoard\");"
+							"pm.globals.set(\"boardName\", \"oldBoarD\");"
 						],
 						"type": "text/javascript"
 					}
@@ -144,8 +149,32 @@
 		{
 			"name": "DeleteBoard",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/{{boardId}}?key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"{{boardId}}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
 			},
 			"response": []
 		}
